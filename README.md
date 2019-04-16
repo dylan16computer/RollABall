@@ -1,4 +1,4 @@
-#Instructions for Opening Roll-A-Ball Application in Unity
+Instructions for Opening Roll-A-Ball Application in Unity
 
 1. Open Unity
 2. Click **Open** near the upper right-hand corner of the UI
