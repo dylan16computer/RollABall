@@ -10,11 +10,17 @@ public class PlayerController : MonoBehaviour
     private int count = 0;
     public Text countText;
     public Text winText;
+    public AudioClip collectObjectSound;
+    public AudioClip winSound;
+    public AudioSource winSoundSource;
+    public AudioSource collectObjectSource;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         SetCountText();
         winText.text = "";
+        collectObjectSource.clip = collectObjectSound;
+        winSoundSource.clip = winSound;
     }
     private void FixedUpdate()
     {
@@ -28,6 +34,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
+            collectObjectSource.Play();
             count += 1;
             SetCountText();
         }
@@ -38,6 +45,7 @@ public class PlayerController : MonoBehaviour
         if(count >= 12)
         {
             winText.text = "You Win!";
+            winSoundSource.Play();
         }
     }
 }
