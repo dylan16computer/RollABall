@@ -7,3 +7,5 @@ Instructions for Opening Roll-A-Ball Application in Unity
 5. Click **RollABall** and **Select Folder**
 
 Unity should open the files automatically from thereon.
+
+If you do not wish to clone the repository you can simply download the files. To download the files click **Clone or download** and then click **Download ZIP**. Extract these files to wherever you desire.
